@@ -1,0 +1,132 @@
+<div class="mango" color="primary">
+    <app-nav></app-nav>
+    <div class="box">
+        <div class="card">
+            <form class="form" [formGroup]="searchFrom" (ngSubmit)="onSubmit()">
+                <h2 style="color: white; grid-row: a;">Find places to stay</h2>
+                <mat-form-field class="Fields where" style="grid-area: c;" color="Primary" >
+                    <mat-label>Where</mat-label>
+                    <input formControlName="whereInput" matInput placeholder="Where" >
+                    <mat-hint>Errors appear instantly!</mat-hint>                  
+                </mat-form-field>
+
+                <mat-form-field class="Fields" style="grid-area: e;" color="Primary" >
+                    <mat-label >From</mat-label>
+                    <input formControlName="dateFrom" matInput [matDatepicker]="picker">
+                    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                    <mat-datepicker #picker></mat-datepicker>
+                  </mat-form-field>
+                  
+                  <mat-form-field class="Fields" style="grid-area: f;" color="Primary" >
+                    <mat-label>To</mat-label>
+                    <input formControlName="dateTo" matInput [matDatepicker]="picker2">
+                    <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
+                    <mat-datepicker #picker2></mat-datepicker>
+                  </mat-form-field>
+                  
+                  <mat-form-field class="Fields" appearance="fill" style="grid-area: g;" color="primary">
+                    <mat-label>Adults</mat-label>
+                    <mat-select formControlName="adultsChooser">
+                      <mat-option value="option">1</mat-option>
+                      <mat-option value="option">2</mat-option>
+                      <mat-option value="option">3</mat-option>
+                      <mat-option value="option">4</mat-option>
+                      <mat-option value="option">5</mat-option>
+                    </mat-select>
+                  </mat-form-field>
+                  <mat-form-field class="Fields" appearance="fill" style="grid-area: h;" color="Primary">
+                    <mat-label>Children</mat-label>
+                    <mat-select formControlName="childChooser" >
+                        <mat-option value="option">1</mat-option>
+                        <mat-option value="option">2</mat-option>
+                        <mat-option value="option">3</mat-option>
+                        <mat-option value="option">4</mat-option>
+                        <mat-option value="option">5</mat-option>
+                    </mat-select>
+                  </mat-form-field>
+                  <br>
+                  <button [disabled]="!searchFrom.valid" type="submit" mat-raised-button class="button" color="primary">Search</button>
+                  
+            </form>
+        </div>
+    </div><!--End of section 1-->
+    <div class="secondContainer">
+      <div class="innerContainer2">
+        <h2 class="Heading2">
+          Top experiences near you
+          <div class="laidCard">
+
+            <mat-card class="c1">
+              <img mat-card-image src="../../assets/Images/mango.jpg" alt="Image of a mango">
+              <mat-card-content>
+                <p id="cardText">
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                  Numquam, consequuntur. Dolor labore eos minima ex sequi quasi necessitatibus debitis soluta,
+                  vel quaerat doloribus nemo inventore enim, delectus dolorum repudiandae possimus?
+                </p>
+              </mat-card-content>
+              <mat-card-header>
+                <div mat-card-avatar class="hammad-header-image"></div>
+                <mat-card-title>Hammmad Safdar</mat-card-title>
+                <mat-card-subtitle>USA</mat-card-subtitle>
+              </mat-card-header>
+            </mat-card>
+
+            <mat-card class="c2">
+              <img mat-card-image src="../../assets/Images/cocoi.jpg" alt="Image of Coconut Trees">
+              <mat-card-content>
+                <p id="cardText">
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                  Numquam, consequuntur. Dolor labore eos minima ex sequi quasi necessitatibus debitis soluta,
+                  vel quaerat doloribus nemo inventore enim, delectus dolorum repudiandae possimus?
+                </p>
+              </mat-card-content>
+              <mat-card-header>
+                <div mat-card-avatar class="coco-header-image"></div>
+                <mat-card-title>Khuzaima Shaheryar</mat-card-title>
+                <mat-card-subtitle>Haroonabad Sands</mat-card-subtitle>
+              </mat-card-header>
+            </mat-card>
+
+            <mat-card class="c3">
+              <img mat-card-image src="../../assets/Images/Kabar.jpg" alt="Image of a kabarkhana">
+              <mat-card-content>
+                <p id="cardText">
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                  Numquam, consequuntur. Dolor labore eos minima ex sequi quasi necessitatibus debitis soluta,
+                  vel quaerat doloribus nemo inventore enim, delectus dolorum repudiandae possimus?
+                </p>
+              </mat-card-content>
+              <mat-card-header>
+                <div mat-card-avatar class="chaddi-header-image"></div>
+                <mat-card-title>Ibrahim Munawar</mat-card-title>
+                <mat-card-subtitle>Queen Chowk</mat-card-subtitle>
+              </mat-card-header>
+            </mat-card>
+
+            <mat-card class="c4">
+              <img mat-card-image src="../../assets/Images/Ducks.jpg" alt="Image of a batakh ghar">
+              <mat-card-content>
+                <p id="cardText">
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                  Numquam, consequuntur. Dolor labore eos minima ex sequi quasi necessitatibus debitis soluta,
+                  vel quaerat doloribus nemo inventore enim, delectus dolorum repudiandae possimus?
+                </p>
+              </mat-card-content>
+              <mat-card-header>
+                <div mat-card-avatar class="batakh-header-image"></div>
+                <mat-card-title>Uxair Khan</mat-card-title>
+                <mat-card-subtitle>Mardan</mat-card-subtitle>
+              </mat-card-header>
+            </mat-card>
+
+           
+          </div>
+        </h2>
+
+      </div>
+    </div>
+
+    
+
+</div>

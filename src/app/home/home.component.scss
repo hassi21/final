@@ -1,0 +1,163 @@
+.mango{
+    
+    //display: absolute;
+    
+    background-color: #2b2b2b;
+    
+    height:100vh;
+    background-image: url('../../assets/Images/9.jpg');
+    background-size:cover; 
+    //width:100%;
+    background-position:50% 50%;
+    
+    
+    
+}
+.box{
+    
+    max-height: 93%;
+    max-width: 100%;
+    //margin:0px 80px 0px 80px;
+    margin: 0px 90px 0px 90px;//The auto padding at the either sides of the navbar is 16px
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas:
+    "a b c"
+    "d e f"
+    "g h i";
+    justify-content: center;
+    
+}
+.card{
+
+    //card Style
+    justify-content: center;  
+    background-color:#2b2b2b;
+    grid-area: a;
+    margin:2rem;
+    border-radius:5px;
+    
+    //Card Layout
+    
+     
+
+    
+
+}
+.p{
+    
+}
+.form{
+    margin: 20px 20px 20px 20px;
+    font-size: 16px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 0.5fr ;
+    grid-template-areas: 
+    "a b"
+    "c d"
+    "e f"
+    "g h"
+    "i j";
+    grid-gap: 10px;
+    color: white;
+}
+.h2{
+    //justify-self: right;
+}
+.fields{
+    
+}
+.where{
+    grid-column:a/b ;
+    
+}
+.button{
+    grid-column: i/j;
+    
+}
+
+.secondContainer{
+    
+    background-color: #2b2b2b;
+}
+.innerContainer2{
+    padding: 90px;
+    margin: 0px 90px 0px 90px;//The auto padding at the either sides of the navbar is 16px
+    
+    
+}
+.Heading2{
+
+    color:white;
+    margin: 0px 0px 0px 0px;
+    padding: 10px 10px 10px 10px;
+
+
+}
+
+.laidCard{
+    margin-top: 2em;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-areas: 
+    "x y z zx";
+    grid-gap: 10px;
+}
+.card{
+    background-color: #3f3f3f;
+}
+.c1{
+grid-area: x;
+
+}
+.c2{
+grid-area: y;
+}
+.c3{
+grid-area: z;
+}
+.c4{
+grid-area: zx;
+}
+#cardText{
+    font-size: 11px;
+    justify-content: center;
+}
+.hammad-header-image {
+    
+    background-image: url('../../assets/Images/amb.JPG');
+    
+    background-size: cover;
+    transform: rotate(90deg);
+  }
+  .coco-header-image{
+
+    background-image: url('../../assets/Images/cocoi.jpg');
+    
+    background-size: cover;
+    //transform: rotate(90deg);
+  }
+  .chaddi-header-image{
+
+    background-image: url('../../assets/Images/Chaddi.JPG');
+    
+    background-size: cover;
+   // transform: rotate(90deg);
+  }
+  .batakh-header-image{
+    background-image: url('../../assets/Images/uzii.jpg');
+    
+    background-size: cover;
+    //transform: rotate(90deg);
+
+  }
+  .mat-card-title{
+      font-size: medium;
+
+  }
+  .mat-card-subtitle{
+      padding-left: 10px;
+      font-size :10px;
+  }

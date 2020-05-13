@@ -1,1 +1,31 @@
 /* You can add global styles to this file, and also import other style files */
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+//@import '~material-design-icons/iconfont/material-icons.css';
+//@import '~bootstrap/dist/css/bootstrap.min.css';
+/******************************************************************************/
+//Main Coloring Pallete
+
+
+.primary{
+    background-color: #4f81c7;
+}
+
+.accent{
+    background-color: #64c4ed;
+}
+.warn{
+    background-color: #fcfafa;
+}
+.secondary{
+    background-color: #f0d78c;
+}
+.transparent{
+    background-color: transparent;
+    //opacity: 0.5;
+
+}
+.primaryDark{
+    background-color: #2b2b2b;
+}
+//Coloring Pallete end

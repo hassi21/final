@@ -1,0 +1,112 @@
+<div class="outerMost">
+
+    <div class="navigation">
+    
+        <app-nav></app-nav>
+        
+    </div>
+
+    <div class="containerMain">      
+ 
+        <div class="card">
+        
+            <div class ="primaryDark box">
+            
+                <h2 style="font-family: sans-serif;">Signup</h2>
+            
+                <form class="mainform" [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+            
+                    <mat-form-field class="Fields f1" color="priamry" appearance="outline">
+            
+                        <mat-label>Email</mat-label>
+            
+                        <input type="email" formControlName="email" matInput placeholder="Email" >
+            
+                        <mat-error *ngIf="email.invalid && !email.pristine">Invalid email</mat-error>                
+                  
+            
+                    </mat-form-field>
+            
+                    <br>
+            
+                    <mat-form-field class="Fields f1" color="primary" appearance="outline">
+            
+                        <mat-label>Confirm Email</mat-label>
+            
+                        <input formControlName="confirmEmail" matInput placeholder="Confirm Email" >
+            
+                        <mat-error *ngIf="email.invalid">The password doesnot match</mat-error>
+                    </mat-form-field>
+                
+            
+                    <br>
+
+            
+                    <mat-form-field class="Fields f2" color="primary" appearance ="outline">
+            
+                        <mat-label>Password</mat-label>
+            
+                        <input formControlName="pass" matInput [type]="hide ? 'password' : 'text'" placeholder="Password" appearance="ouline">
+                        <mat-error *ngIf="password.invalid">Password must be at least 6 character long</mat-error>
+                        <button type="button" matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                
+                            <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+            
+                        </button>
+                
+                        <mat-hint>Errors appear instantly!</mat-hint>  
+                
+                        <!--<mat-icon matSuffix>sentiment_very_satisfied</mat-icon>-->                
+                  
+                
+                    </mat-form-field>
+                
+                    <br>
+                
+                    <mat-form-field class="Fields f2" color="primary" appearance ="outline">
+                
+                        <mat-label>Confirm Password</mat-label>
+                
+                        <input formControlName="confirmPass" matInput [type]="hide ? 'password' : 'text'" placeholder="Confirm Password" appearance="ouline">
+                
+                        <button type="button" matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                
+                            <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                
+                        </button>
+                
+                        <mat-hint>Errors appear instantly!</mat-hint>  
+                
+                        <!--<mat-icon matSuffix>sentiment_very_satisfied</mat-icon>-->                
+                  
+                
+                    </mat-form-field>
+                
+                    <br>
+                
+                    <button [disabled]="!registerForm.valid" mat-raised-button type="submit" class="button" color ="primary">Signup</button>
+                
+                    <br>
+                
+                    <br>
+                
+                    <button class="loginLink" mat-button routerLink="/login">Login instead?</button>
+                
+                    <br>
+                
+                    <br>
+           
+                </form>
+              
+        
+            </div>
+
+    
+        </div><!--End of the 1st Section-->
+        
+
+        
+
+
+    </div>
+</div>

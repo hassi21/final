@@ -1,0 +1,40 @@
+.contentBody{
+   display:grid;
+   grid-template-columns: 1fr 1fr;
+   grid-template-areas: "a b";
+   height:300px;
+   width:500px;
+   text-align: center;
+   
+
+}
+.txt
+{
+
+
+    padding: 120px 0;
+    font-family: 'Lobster', cursive;
+    
+
+}
+.left{
+    
+    &:hover{
+        opacity: 0.7;
+    }
+    grid-area: a;
+
+    //background-color: red;
+   background-image: url('../../assets/Images/Couch.jpeg');background-size:cover; width:100%;
+   background-position:50% 50%;
+}
+.right{
+
+    &:hover{
+        opacity: 0.7;
+    }
+    grid-area: b;
+    //background-color: green;
+    background-image: url('../../assets/Images/house.jpeg');background-size:cover; width:100%;
+    background-position:50% 50%;
+}

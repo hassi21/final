@@ -1,0 +1,124 @@
+.navbar{
+    //position: fixed;
+    z-index: -12;
+    
+    }
+.container{
+    //margin: 0px 90px 0px 90px;
+    position: absolute;
+    z-index: +22;
+    height: 100%;
+    width:100%;
+    //background-image: url('../../assets/Images/4.jpg');background-size:cover; width:100%;background-position:50% 50%;
+    background-color:#2b2b2b;
+    //overflow: hidden;
+}
+
+//This is for making a grid inside the class container
+.GridCard{ 
+    margin: 0px 90px 0px 90px;
+    z-index: +22;
+    display: grid;
+    grid-template-columns:  0.6fr 1fr 1fr;
+    grid-template-rows:     1fr 1fr 1fr;
+    grid-template-areas:
+    "a b c"
+    "d e f"
+    "g h i";
+
+   // position: relative;
+    //color:blue;
+    height: 93%;
+    widows: 100vh;;
+    //background-color: #2b2b2b;
+    justify-content: center;
+    text-align: center;
+    //Main-form CSS/grid
+    .mainform{
+           
+        display:grid;
+        grid-template-columns:1fr 2fr 1fr;
+        grid-template-rows: 1fr 1fr 0.5fr 0.5fr 0.5fr 0.5fr;
+        grid-template-areas: 
+        "a1 b1 c1"
+        "e1 f1 g1"
+        "i1 j1 k1"
+        "m1 n1 o1"
+        "p1 q1 r1"
+        "s1 t1 u1"
+        ;
+        grid-column-gap: 10px;
+        
+     
+    }
+    
+    .button{
+
+        margin-top: 5px;
+        grid-area: j1;
+        
+    }
+    .signUpLink{
+        grid-area: n1;
+        color:white;
+    }
+    .forgotPassLink{
+        grid-area:q1;
+        color:white;
+    }
+
+    .bigCard{//idea have a story like feature for friends to share and watch your travel in a glimpse called highlights
+        margin: 80px 20px 80px 20px;
+        border-radius: 6px; ;
+        background-color: #3f3f3f;
+        grid-column:b/c ;
+        grid-row: a/g;
+
+        .bcHeading{
+            color:white;
+        }
+
+    }
+    
+    
+}
+
+
+//This is for the Login Card 
+//Improve your code clean it and segregate things to one leve down further.
+.card{
+    
+    grid-area: d ;
+    background-color: #3f3f3f;
+    border-radius: 5px;
+   // outline:gray solid 1px;
+    -moz-outline-radius: 2px;
+
+    
+}
+h2{
+    color: white;
+}
+//This is form body marginalization and other stuff
+.ff{
+    width: 1000px;
+}
+.Fields{
+    font-size: 15px;
+    color:white;
+    width: 300px;
+    size: large;
+    
+    
+}
+.f1{
+    
+grid-area:b1;
+}
+.f2{
+grid-area: f1;
+}
+.icon{
+    
+   // background-color: #2b2b2b;
+}
