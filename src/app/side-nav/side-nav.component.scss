@@ -1,0 +1,43 @@
+.navBar {
+  position: fixed;
+  background-color: #23232e;
+  height: 100%;
+  width: 5rem;
+}
+.navList {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  list-style: none;
+}
+.nav-items {
+  width: 100%;
+}
+.navAction {
+  outline: none;
+  display: flex;
+  align-items: center;
+  height: 5rem;
+  text-decoration: none;
+  color: white;
+  justify-content: center;
+  text-align: center;
+}
+.navAction:hover {
+  background: #141418;
+}
+.nav-items:last-child {
+  margin-top: auto;
+}
+.avatar {
+  border-radius: 50%;
+  height: 3rem;
+  width: 3rem;
+  background-image: url("../../assets/Images/amb.JPG");
+  background-size: cover;
+  transform: rotate(90deg);
+}

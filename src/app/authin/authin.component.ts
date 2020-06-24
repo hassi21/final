@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, Validators,FormGroup,  FormBuilder } from '@angular/forms';
-
-
+import { UsersService } from "../services/users.service"
 
 @Component({
   selector: 'app-authin',
@@ -21,7 +20,7 @@ onLogin(){
   
   hide=true;
 
-  constructor(private fb:FormBuilder) { 
+  constructor(private fb:FormBuilder,private serviceUsers:UsersService) { 
     //hide=true;
 
     
@@ -42,18 +41,12 @@ onLogin(){
   }
   onSubmit(){
     console.log('loginForm',this.loginForm.value);
+    this.serviceUsers.authenticate(this.loginForm.value);
   }
   
-  get email() { return this.loginForm.get('email'); }
-  get password() { return this.loginForm.get('pass'); }
-  equalCheck(){
-    console.log('Mat-Error',"works check");
 
-    if (this.loginForm.get('email')==this.loginForm.get('confirmEmail')){
-        return true;
-        
-    }
+  
 
-  }
+  
 }
 

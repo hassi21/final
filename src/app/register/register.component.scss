@@ -11,6 +11,8 @@
    }
    .navigation{
        z-index: -12;
+       display: flex;
+       flex-direction: column;
       
    // background-color:black;
    }
@@ -25,7 +27,7 @@
     justify-content: center;
     //font-size: 14px;
     display:grid;
-    grid-template-columns: 2fr 1fr 2fr;
+    grid-template-columns: 2fr 1.5fr 2fr;
     grid-template-rows: 1fr 2fr 1fr;
     grid-template-areas: 
     "a2 b2 c2"

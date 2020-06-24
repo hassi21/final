@@ -1,0 +1,28 @@
+.grid-container {
+  height: 100%;
+  width: 100%;
+  background-color: red;
+  position: fixed;
+  margin-left: 5rem;
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-areas: "1 2 3";
+  .leftArea {
+    
+    
+    grid-column: 1;
+    background-color: green;
+    position: fixed;
+  }
+  .midArea {
+    grid-column: 2;
+    background-color: indigo;
+    position: fixed;
+  }
+  .rightArea {
+    grid-column: 3;
+    background-color: yellow;
+    position: fixed;
+  }
+}
+

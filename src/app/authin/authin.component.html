@@ -1,81 +1,93 @@
 <!--UpperWrapper Container-Start-->
-<div class="container" >    
-    <div class="navbar">
-        <app-nav ></app-nav>
-    </div>
-    <div class="GridCard">
-       
-        <div class ="primaryDark card">
-            <h2 style="font-family: sans-serif;">Login</h2>
-            <form [formGroup]="loginForm" class="mainform" (ngsubmit)="onSubmit()">
+<div class="container">
+  <div class="navbar">
+    <app-side-nav></app-side-nav>
+  </div>
+  <div class="GridCard">
+    <div class="primaryDark card">
+      <h2 style="font-family: sans-serif;">Login</h2>
+      <form [formGroup]="loginForm" class="mainform" (ngSubmit)="onSubmit()">
+        <mat-form-field class="Fields f1" color="primary" appearance="outline">
+          <mat-label>Email</mat-label>
+          <input
+            type="email"
+            matInput
+            placeholder="Email"
+            formControlName="email"
+          />
+          <!-- <mat-error *ngIf="email.invalid && !email.pristine">Invalid email</mat-error>               
+                   -->
+        </mat-form-field>
+        <br />
 
-                <mat-form-field class="Fields f1" color="primary" appearance="outline">
-                    <mat-label>Email</mat-label>
-                    <input type="email" matInput placeholder="Email" formControlName="email" >
-                    <mat-error *ngIf="email.invalid && !email.pristine">Invalid email</mat-error>               
-                  
-                </mat-form-field>
-                <br>
+        <mat-form-field class="Fields f2" color="primary" appearance="outline">
+          <mat-label>Password</mat-label>
+          <input
+            formControlName="pass"
+            matInput
+            [type]="hide ? 'password' : 'text'"
+            placeholder="Password"
+            appearance="outline"
+          />
+          <!-- <mat-error *ngIf="pass.invalid && !pass.pristine">Password should be at least 6 characters</mat-error>               
+                -->
 
-                <mat-form-field class="Fields f2" color="primary" appearance ="outline">
-                    <mat-label>Password</mat-label>
-                    <input formControlName="pass" matInput [type]="hide ? 'password' : 'text'" placeholder="Password" appearance="ouline" >
-                   <!-- <mat-error *ngIf="pass.invalid && !pass.pristine">Password should be at least 6 characters</mat-error>               
-                -->          
-                   
-                   <!-- <button  matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+          <!-- <button  matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
                         <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
                     </button>-->
-                    
-                    <!--<mat-icon matSuffix>sentiment_very_satisfied</mat-icon>-->                
-                  
-                </mat-form-field>
-                <br>
-                <button [disabled]="!loginForm.valid" type="submit"  mat-raised-button class="button" color ="primary">Login</button>
-                <br>
-                <br>
 
-                <button type="button" class="signUpLink" mat-button routerLink="/register">Create a new account?</button>
-                <button type="button" class="forgotPassLink" mat-button routerLink="/signup">Forgot Password?</button>
-              
-            </form>
-              
-              
-              
-        </div>
-        
-        <div class="bigCard">
-            <div style="margin:10px;">            
-                <h1 class="bcHeading">Let friends glimpse into your adventure with Higlights</h1>
-                <p style="color:white;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus exercitationem
-                   accusantium praesentium dolores, quos inventore ad. Facilis quas sunt distinctio 
-                   illo corrupti similique dolores obcaecati libero sint voluptates provident cumque
-                   laboriosam iure voluptatum, harum molestiae est necessitatibus nam alias. Expedita
-                   magni eum fugit et non doloremque molestiae aliquam autem sit at rem sequi illo itaque,
-                   ad tenetur quam similique praesentium dolor eaque impedit quod sint asperiores debitis.
-                   Voluptates consequatur laudantium numquam sapiente! Exercitationem quisquam cumque deserunt
-                   animi sit facilis corporis. Labore nemo officiis porro eos minus nulla aliquam aliquid! Dolorum,
-                   aspernatur. Quasi expedita quod nihil neque aperiam dolorem, atque fugiat et iste quo itaque,
-                   a nostrum quidem cumque. Enim nihil molestiae tenetur rerum neque harum cum ex ipsum ratione.
-                   Suscipit nemo magni commodi necessitatibus deserunt doloremque dolorum minus a non quae molestias, 
-                   maxime labore qui ratione quas quidem quam nostrum ipsa? Earum blanditiis dolorum, laudantium magnam 
-                   quis dicta ad libero, veniam accusantium sed vero modi corporis qui perferendis assumenda ducimus sapiente 
-                   asperiores voluptas! Ex animi voluptatem similique deleniti quasi. Assumenda reiciendis alias doloribus 
-                   dolore non animi aliquam voluptates quis asperiores. Eligendi error tempora aspernatur sit tenetur, 
-                   aut modi, officia blanditiis assumenda, neque saepe accusantium quisquam deserunt in. Repudiandae 
-                   facere eius in quisquam recusandae laudantium debitis, libero ipsum, nesciunt a consequuntur reiciendis 
-                   neque quae illum, dolore alias dolores quod est. Obcaecati reiciendis suscipit fuga quod deleniti, 
-                   sed dolorum perferendis molestiae saepe sequi, distinctio id! Nesciunt accusantium illum officiis dolorum 
-                   voluptate, libero quia ipsam eos doloribus pariatur ullam quisquam vero laboriosam nemo facere laborum 
-                   deserunt natus iste cupiditate hic. Facere porro similique quibusdam vel pariatur perferendis sit unde 
-                   voluptas accusamus ullam adipisci atque vitae quas consequuntur dolorum enim eius nobis, odit et repudiandae 
-                   vero corporis! Veniam sequi recusandae quas quasi? Debitis totam mollitia reprehenderit! Enim iste, quos 
-                   ratione doloremque vel dolores quo.</p>
-            </div>
-        </div>
-        
-        
+          <!--<mat-icon matSuffix>sentiment_very_satisfied</mat-icon>-->
+        </mat-form-field>
+        <br />
+        <button
+          [disabled]="!loginForm.valid"
+          type="submit"
+          mat-raised-button
+          class="button"
+          color="primary"
+        >
+          Login
+        </button>
+        <br />
+        <br />
+
+        <button
+          type="button"
+          class="signUpLink"
+          mat-button
+          routerLink="/register"
+        >
+          Create a new account?
+        </button>
+        <button
+          type="button"
+          class="forgotPassLink"
+          mat-button
+          routerLink="/signup"
+        >
+          Forgot Password?
+        </button>
+      </form>
     </div>
 
+    <div class="bigCard">
+      <div style="margin: 10px;">
+        <h1 class="bcHeading">
+          Let friends glimpse into your adventure with Higlights
+        </h1>
+        <img
+          class="bcImage"
+          mat-card-image
+          src="../../assets/Images/armSpread.jpg"
+          alt="Image of a girl"
+        />
+        <p class="bcPara" style="color: white;">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem impedit
+          neque facere omnis consectetur expedita. Reiciendis nemo neque hic
+          aperiam.
+        </p>
+      </div>
+    </div>
+  </div>
 </div>
 <!--Wrapper container-End-->

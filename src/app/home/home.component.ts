@@ -12,8 +12,13 @@ import { FormGroup,FormBuilder,Validators } from '@angular/forms';
 export class HomeComponent implements OnInit {
 
   searchFrom:FormGroup;
+  minDate: Date;
+  
 
-  constructor(public dialog: MatDialog,private fb:FormBuilder) { }
+  constructor(public dialog: MatDialog,private fb:FormBuilder) { 
+    this.minDate = new Date();
+       }
+  
    openDialog()
    {
      this.dialog.open(DialogChoiceComponent);

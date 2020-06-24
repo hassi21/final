@@ -15,6 +15,8 @@ import { AuthinComponent } from './authin/authin.component';
 import { RegisterComponent } from './register/register.component';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { DialogChoiceComponent } from './dialog-choice/dialog-choice.component';
+import { SideNavComponent } from './side-nav/side-nav.component';
+import { ProfileComponent } from './profile/profile.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,7 +27,9 @@ import { DialogChoiceComponent } from './dialog-choice/dialog-choice.component';
     AuthinComponent,
     RegisterComponent,
     AboutUsComponent,
-    DialogChoiceComponent
+    DialogChoiceComponent,
+    SideNavComponent,
+    ProfileComponent,
     
   ],
   entryComponents:[DialogChoiceComponent],

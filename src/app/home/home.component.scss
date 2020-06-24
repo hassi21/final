@@ -5,7 +5,7 @@
     background-color: #2b2b2b;
     
     height:100vh;
-    background-image: url('../../assets/Images/9.jpg');
+    background-image: url('../../assets/Images/2850815.jpg');
     background-size:cover; 
     //width:100%;
     background-position:50% 50%;
@@ -15,7 +15,7 @@
 }
 .box{
     
-    max-height: 93%;
+    max-height: 100%;
     max-width: 100%;
     //margin:0px 80px 0px 80px;
     margin: 0px 90px 0px 90px;//The auto padding at the either sides of the navbar is 16px
@@ -53,28 +53,29 @@
     font-size: 16px;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr 0.5fr ;
+    grid-template-rows: 1fr 1fr 1fr 1fr ;
     grid-template-areas: 
-    "a b"
-    "c d"
-    "e f"
-    "g h"
-    "i j";
+    "j k"
+    "l m"
+    "n o"
+    "p q";
+
     grid-gap: 10px;
     color: white;
-}
-.h2{
-    //justify-self: right;
-}
-.fields{
-    
-}
-.where{
-    grid-column:a/b ;
-    
-}
-.button{
-    grid-column: i/j;
+    .h2{
+        grid-column: j/k;
+    }
+    .Fields{
+        
+    }
+    .where{
+        grid-column:l/m ;
+        
+    }
+    .button{
+        grid-column:p/s;
+        
+    }
     
 }
 

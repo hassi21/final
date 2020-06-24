@@ -73,9 +73,31 @@
         background-color: #3f3f3f;
         grid-column:b/c ;
         grid-row: a/g;
+        justify-content:  center;
+        display: grid;
+        grid-template-rows: 0.5fr 1fr 2fr;
+        grid-template-areas: 
+        "r1"
+        "r2"
+        "r3"
+        ;
 
         .bcHeading{
             color:white;
+        }
+        .bcImage{
+            grid-area: r2;
+            height:400px;
+            width: 85%;
+            background-size: cover;
+            
+        }
+        .bcPara{
+
+            
+
+            grid-area: r ;
+            padding: 0px 80px 0px 80px;
         }
 
     }
